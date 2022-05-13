@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 
 class SpecificAnimal implements Animals{
 
@@ -25,5 +23,9 @@ class SpecificAnimal implements Animals{
 
     public String getType(){
         return type;
+    }
+
+    public String getItemName() {
+        return itemName;
     }
 }

@@ -62,7 +62,7 @@ public class TestingTest {
     }
 
     @Test
-    public void threAreAlsoAPigs() {
+    public void thereAreAlsoAPigs() {
         SpecificAnimal chicken = new SpecificAnimal("chicken",6, "eggs");
         SpecificAnimal cow = new SpecificAnimal("cow",3, "liters");
         SpecificAnimal pig = new SpecificAnimal("pig",2, "kg");
@@ -70,6 +70,18 @@ public class TestingTest {
         Farm ourFarm = new Farm(Arrays.asList(cow, chicken, pig));
 
         assertEquals(ourFarm.getFarmEnimals().size(), 3);
+    }
+
+    @Test
+    public void sortedEnimalsMap() {
+        SpecificAnimal chicken = new SpecificAnimal("chicken",6, "eggs");
+        SpecificAnimal cow = new SpecificAnimal("cow",3, "liters");
+        SpecificAnimal pig = new SpecificAnimal("pig",2, "kg");
+
+        // in this case our farm has 1 cow, 1 chicken and one pig
+        Farm ourFarm = new Farm(Arrays.asList(cow, chicken, pig));
+
+        System.out.println(ourFarm.weeklyFarmProduction());
     }
 }
 
