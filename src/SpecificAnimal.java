@@ -5,24 +5,25 @@ class SpecificAnimal implements Animals{
 
     private int itemsProduced = 0;
     private String itemName;
+    private String type;
 
     @Override
     public int produced() {
         return itemsProduced;
     }
 
-//    public List<SpecificAnimal> SpecificAnimal(int items) {
-//        ArrayList<SpecificAnimal> result = new ArrayList<SpecificAnimal>();
-//        int i=0;
-//        while (i < items){
-//            result.add(new SpecificAnimal());
-//            i++;
-//        }
-//        return result;
-//    }
-
     public SpecificAnimal(int production, String nameOfTheItem) {
-        itemsProduced = production;
-        itemName = nameOfTheItem;
+        this.itemsProduced = production;
+        this.itemName = nameOfTheItem;
+    }
+
+    public SpecificAnimal(String type, int production, String nameOfTheItem) {
+        this.itemsProduced = production;
+        this.itemName = nameOfTheItem;
+        this.type = type;
+    }
+
+    public String getType(){
+        return type;
     }
 }

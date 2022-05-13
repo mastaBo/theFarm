@@ -8,18 +8,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestingTest {
 
-    //hello!
-//    @Test
-//    public void failingTest() {
-//        assertEquals(1,2);
-//    }
-
     @Test
     public void twoCowsShouldProduce6litresOfMilk() {
-//        assertEquals(1,2);
         int resultingLiters = 6;
         SpecificAnimal cow = new SpecificAnimal(3, "liters");
-//        SpecificAnimal chicken = new SpecificAnimal(6);
         List<SpecificAnimal> animalList = new ArrayList<>();
 
         animalList.add(cow);
@@ -30,13 +22,10 @@ public class TestingTest {
             tmpResult += animal.produced();
         }
         assert resultingLiters == tmpResult;
-//        Farm ourFarm = new Farm(animals);
-//        resultingLiters = ourFarm.ourAnimals().each().produced();
     }
 
     @Test
     public void fiveChickensShouldProduce30Eggs() {
-//        assertEquals(1,2);
         int resultingEggs = 30;
         int numberOfAnimals = 5;
         SpecificAnimal chicken = new SpecificAnimal(6, "eggs");
@@ -63,7 +52,13 @@ public class TestingTest {
         //Arrays.asList("Hello", "World!", "How", "Are", "You");
         Farm ourFarm = new Farm(Arrays.asList(cow, chicken));
 
-        assert ourFarm.getFarmEnimals().size() == 2;
+        assertEquals(ourFarm.getFarmEnimals().size(), 2);
+    }
+
+    @Test
+    public void animalHasType() {
+        SpecificAnimal chicken = new SpecificAnimal("chicken",6, "eggs");
+        assertEquals(chicken.getType(), "chicken");
     }
 }
 
