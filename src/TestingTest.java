@@ -60,6 +60,17 @@ public class TestingTest {
         SpecificAnimal chicken = new SpecificAnimal("chicken",6, "eggs");
         assertEquals(chicken.getType(), "chicken");
     }
+
+    @Test
+    public void threAreAlsoAPigs() {
+        SpecificAnimal chicken = new SpecificAnimal("chicken",6, "eggs");
+        SpecificAnimal cow = new SpecificAnimal("cow",3, "liters");
+        SpecificAnimal pig = new SpecificAnimal("pig",2, "kg");
+
+        Farm ourFarm = new Farm(Arrays.asList(cow, chicken, pig));
+
+        assertEquals(ourFarm.getFarmEnimals().size(), 3);
+    }
 }
 
 
